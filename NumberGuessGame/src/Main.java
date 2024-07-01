@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Random;
+import java.util.Random;   //to generate random numbers
 
 public class Main {
     private JFrame frame;
@@ -13,7 +13,7 @@ public class Main {
     private JLabel attemptsLabel;
     private JLabel scoreLabel;
 
-    private Random random;
+    private Random random; 
     private int lowerBound = 1;
     private int upperBound = 100;
     private int randomNumber;
@@ -27,26 +27,26 @@ public class Main {
 
         frame = new JFrame("Number Guessing Game");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 250); // Adjusted size for better layout
+        frame.setSize(400, 250); 
 
         panel = new JPanel();
-        panel.setLayout(new GridLayout(6, 1)); // Increased rows for better spacing and aesthetics
-        panel.setBackground(new Color(235, 252, 255)); // Light blue background color
+        panel.setLayout(new GridLayout(6, 1)); 
+        panel.setBackground(new Color(235, 252, 255)); 
 
-        Font bigFont = new Font("Arial", Font.BOLD, 18); // Custom font for headers and labels
+        Font bigFont = new Font("Arial", Font.BOLD, 18); 
 
         messageLabel = new JLabel("Guess a number between " + lowerBound + " and " + upperBound);
         messageLabel.setFont(bigFont);
         panel.add(messageLabel);
 
         guessField = new JTextField(10);
-        guessField.setFont(new Font("Arial", Font.PLAIN, 16)); // Custom font for input field
+        guessField.setFont(new Font("Arial", Font.PLAIN, 16)); 
         panel.add(guessField);
 
         guessButton = new JButton("Guess");
         guessButton.setFont(bigFont);
-        guessButton.setBackground(new Color(87, 181, 192)); // Custom button color
-        guessButton.setForeground(Color.WHITE); // Button text color
+        guessButton.setBackground(new Color(87, 181, 192)); 
+        guessButton.setForeground(Color.WHITE); 
         guessButton.addActionListener(new GuessButtonListener());
         panel.add(guessButton);
 
@@ -58,7 +58,7 @@ public class Main {
         scoreLabel.setFont(bigFont);
         panel.add(scoreLabel);
 
-        frame.getContentPane().setBackground(new Color(235, 252, 255)); // Matching background color for frame
+        frame.getContentPane().setBackground(new Color(235, 252, 255)); 
         frame.getContentPane().add(panel);
         frame.setVisible(true);
     }
