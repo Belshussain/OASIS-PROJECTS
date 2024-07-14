@@ -11,6 +11,7 @@ public class Main {
         System.out.println("Welcome to the ATM! Please use these default user details to test the ATM functionality: ");
         System.out.println("User ID : user00");
         System.out.println("User PIN : 1111");
+        System.out.println(" Use this RecipietID (Already exists on system) : user02");
         while (true) {
             System.out.print("Enter User ID: ");
             String userId = scanner.nextLine();
